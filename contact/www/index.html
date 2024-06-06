@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Manager</title>
+    <link rel="stylesheet" href="lib/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="lib/themes/LayeTheme.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="cordova.js"></script>
+</head>
+
+<body>
+    <div data-role="header" class="header">
+        <h1>Contats</h1>
+    </div>
+    <div data-role="page" id="mesContacts">
+        <div data-role="header" class="header">
+            <h1>Contats</h1>
+        </div>
+        <div role="main" class="ui-content">
+            <a href="#ajouterContact" data-role="button" data-icon="plus" data-iconpos="right"
+                class="btn-primary">Ajouter</a>
+            <ul id="contactList" data-role="listview" data-inset="true" data-filter="true"
+                data-filter-placeholder="rechercher...">
+            </ul>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <h1>DIC3 &copy; Mai 2024</h1>
+        </div>
+    </div>
+
+    <div data-role="page" id="ajouterContact">
+        <div data-role="header" class="header">
+            <a href="#mesContacts" data-icon="arrow-l" data-iconpos="notext" data-rel="back" class="ui-btn-left"></a>
+            <h1>Ajouter Contact</h1>
+        </div>
+        <div role="main" class="ui-content">
+            <form id="addform">
+                <div class="ui-field-contain">
+                    <label for="prenom">Prénom:</label>
+                    <input type="text" name="prenom" id="prenom" required>
+                </div>
+                <div class="ui-field-contain">
+                    <label for="nom">Nom:</label>
+                    <input type="text" name="nom" id="nom" required>
+                </div>
+                <div class="ui-field-contain">
+                    <label for="telephone">Téléphone:</label>
+                    <input type="tel" name="telephone" id="telephone" required>
+                </div>
+                <button type="submit" data-theme="b">Ajouter Contact</button>
+            </form>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <h1>DIC3 &copy; Mai 2024</h1>
+        </div>
+    </div>
+
+</body>
+
+</html>
